@@ -16,24 +16,61 @@
 </head>
 
 <body>
-  <button type="button" class="btn btn-outline-dark mode-btn"><i class="fas fa-moon"></i></button>
 
-  <h1 class="title">Press any key to start.</h1>
+  <div class="header">
+    <label type="button" class="btn btn-outline-dark mode-btn"><i class="fas fa-moon"></i></label>
+
+    <h1 class="title">Press any key to start.</h1>
+  </div>
+
+  <div class="player">
+    <div class="input-group input-group-sm mb-5 player-1">
+      <input class="form-control" type="text" id="p1" placeholder="Enter your name">
+      <label class="btn btn-dark btn-sm" type="button" onclick="result1();"><i class="fas fa-check fa-sm"></i></label>
+    </div>
+    <div class="input-group input-group-sm mb-5 player-2">
+      <input class="form-control" type="text" id="p2" placeholder="Enter your name">
+      <label class="btn btn-dark btn-sm" type="button" onclick="result2();"><i class="fas fa-check fa-sm"></i></label>
+    </div>
+  </div>
+
+
+  <h2 class="game-over hidden">Game over</h2>
+
+
   <div class="game-board">
     <div class="row">
-      <div class="box 1 box-light" id="1"><h2 class="box-content box-content-1"></h2></div>
-      <div class="box 2 box-light" id="2"><h2 class="box-content box-content-2"></h2></div>
-      <div class="box 3 box-light" id="3"><h2 class="box-content box-content-3"></h2></div>
+      <div class="box 1 box-light" id="1">
+        <h2 class="box-content box-content-1"></h2>
+      </div>
+      <div class="box 2 box-light" id="2">
+        <h2 class="box-content box-content-2"></h2>
+      </div>
+      <div class="box 3 box-light" id="3">
+        <h2 class="box-content box-content-3"></h2>
+      </div>
     </div>
     <div class="row">
-      <div class="box 4 box-light" id="4"><h2 class="box-content box-content-4"></h2></div>
-      <div class="box 5 box-light" id="5"><h2 class="box-content box-content-5"></h2></div>
-      <div class="box 6 box-light" id="6"><h2 class="box-content box-content-6"></h2></div>
+      <div class="box 4 box-light" id="4">
+        <h2 class="box-content box-content-4"></h2>
+      </div>
+      <div class="box 5 box-light" id="5">
+        <h2 class="box-content box-content-5"></h2>
+      </div>
+      <div class="box 6 box-light" id="6">
+        <h2 class="box-content box-content-6"></h2>
+      </div>
     </div>
     <div class="row">
-      <div class="box 7 box-light" id="7"><h2 class="box-content box-content-7"></h2></div>
-      <div class="box 8 box-light" id="8"><h2 class="box-content box-content-8"></h2></div>
-      <div class="box 9 box-light" id="9"><h2 class="box-content box-content-9"></h2></div>
+      <div class="box 7 box-light" id="7">
+        <h2 class="box-content box-content-7"></h2>
+      </div>
+      <div class="box 8 box-light" id="8">
+        <h2 class="box-content box-content-8"></h2>
+      </div>
+      <div class="box 9 box-light" id="9">
+        <h2 class="box-content box-content-9"></h2>
+      </div>
     </div>
   </div>
 

@@ -5,7 +5,7 @@ body {
 h1 {
   text-align: center;
   font-family: 'Press Start 2P', cursive;
-  padding: 10px 0;
+  padding: 5px 0;
   color: #424874;
 }
 
@@ -13,6 +13,7 @@ h1 {
   display: flex;
   width: 450px;
   margin: auto;
+  z-index: -1;
 }
 
 .box {
@@ -32,6 +33,7 @@ h1 {
 
 .mode-btn {
   margin: 10px 0 0 10px;
+  position: absolute;
 }
 
 .box-content {
@@ -39,4 +41,36 @@ h1 {
   padding-top: 20px;
   font-family: 'Press Start 2P', cursive;
   font-size: 100px;
+}
+
+.game-over {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: -200px;
+  transform: translate(-50%, 0);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80px;
+  text-align: center;
+  color: #6b011f;
+}
+
+.hidden {
+  display: none;
+}
+
+.transparent {
+  opacity: 0.3;
+}
+.player {
+  display: flex;
+  position: absolute;
+}
+
+.player-1 {
+  margin-left: 50px;
+}
+
+.player-2 {
+  margin-left: 800px;
 }
