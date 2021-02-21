@@ -11,6 +11,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
@@ -19,26 +20,59 @@
 
   <div class="header">
     <label type="button" class="btn btn-outline-dark mode-btn"><i class="fas fa-moon"></i></label>
-
+    <label class="btn btn-outline-dark reload-btn" type="button" onclick="document.location.reload(true)"><i class="fas fa-redo fa-sm"></i> Restart</label>
     <h1 class="title">Press any key to start.</h1>
   </div>
 
   <div class="player">
-    <div class="input-group input-group-sm mb-5 player-1">
-      <input class="form-control" type="text" id="p1" placeholder="Enter your name">
-      <label class="btn btn-dark btn-sm" type="button" onclick="result1();"><i class="fas fa-check fa-sm"></i></label>
+    <div class="player-1">
+      <h3>Player 1</h3>
+      <div class="input-group input-group-sm mb-5">
+        <label class="input-group-text" for="p1-icon">Icon</label>
+        <select class="form-select" id="p1-icon">
+          <option selected>Choose your icon...</option>
+          <option value="<i class='fas fa-jedi'></i>">Jedi</option>
+          <option value="<i class='fas fa-hand-spock'></i>">Spock</option>
+          <option value="<i class='fas fa-robot'></i>">Robot</option>
+          <option value="<i class='fas fa-meteor'></i>">Meteor</option>
+          <option value="<i class='fas fa-rocket'></i>">Rocket</option>
+          <option value="<i class='fas fa-code'></i>">Code</option>
+          <option value="<i class='fas fa-ghost'></i>">Ghost</option>
+        </select>
+      </div>
+      <div class="input-group input-group-sm mb-5">
+        <input class="form-control" type="text" id="p1" placeholder="Enter your name">
+        <label class="btn btn-dark btn-sm" type="button" onclick="result1();"><i class="fas fa-check fa-sm"></i></label>
+      </div>
     </div>
-    <div class="input-group input-group-sm mb-5 player-2">
-      <input class="form-control" type="text" id="p2" placeholder="Enter your name">
-      <label class="btn btn-dark btn-sm" type="button" onclick="result2();"><i class="fas fa-check fa-sm"></i></label>
+    <div class="player-2">
+      <h3>Player 2</h3>
+      <div class="input-group input-group-sm mb-5">
+        <label class="input-group-text" for="p2-icon">Icon</label>
+        <select class="form-select" id="p2-icon">
+          <option selected>Choose your icon...</option>
+          <option value="<i class='fas fa-jedi'></i>">Jedi</option>
+          <option value="<i class='fas fa-hand-spock'></i>">Spock</option>
+          <option value="<i class='fas fa-robot'></i>">Robot</option>
+          <option value="<i class='fas fa-meteor'></i>">Meteor</option>
+          <option value="<i class='fas fa-rocket'></i>">Rocket</option>
+          <option value="<i class='fas fa-code'></i>">Code</option>
+          <option value="<i class='fas fa-ghost'></i>">Ghost</option>
+        </select>
+      </div>
+      <div class="input-group input-group-sm mb-5">
+        <input class="form-control" type="text" id="p2" placeholder="Enter your name">
+        <label class="btn btn-dark btn-sm" type="button" onclick="result2();"><i class="fas fa-check fa-sm"></i></label>
+      </div>
     </div>
+
   </div>
 
 
   <h2 class="game-over hidden">Game over</h2>
 
 
-  <div class="game-board">
+  <div class="game-board transparent">
     <div class="row">
       <div class="box 1 box-light" id="1">
         <h2 class="box-content box-content-1"></h2>

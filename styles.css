@@ -2,11 +2,19 @@ body {
   background-color: #dcd6f7;
 }
 
+/* title */
 h1 {
   text-align: center;
   font-family: 'Press Start 2P', cursive;
-  padding: 5px 0;
+  padding: 20px 0;
   color: #424874;
+}
+/* players options title */
+h3 {
+  font-family: 'Press Start 2P', cursive;
+  color: #424874;
+  font-size: 30px;
+  padding-bottom: 40px;
 }
 
 .game-board {
@@ -36,9 +44,15 @@ h1 {
   position: absolute;
 }
 
+.reload-btn {
+  margin: 10px 0 0 60px;
+  font-family: 'DotGothic16', sans-serif;
+  position: absolute;
+}
+
 .box-content {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 5px;
   font-family: 'Press Start 2P', cursive;
   font-size: 100px;
 }
@@ -65,12 +79,17 @@ h1 {
 .player {
   display: flex;
   position: absolute;
+  font-family: 'DotGothic16', sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .player-1 {
-  margin-left: 50px;
+  padding: 20px 20px 20px 0;
 }
 
 .player-2 {
-  margin-left: 800px;
+  padding: 20px;
 }

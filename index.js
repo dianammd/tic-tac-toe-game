@@ -1,15 +1,19 @@
 var p1;
 var p2;
+var p1icon;
+var p2icon;
 var playersNames = 0;
 
 function result1() {
   p1 = document.getElementById("p1").value;
+  p1icon = document.getElementById("p1-icon").value;
   playersNames++;
-  console.log(p1 + " " + playersNames);
+  console.log(p1icon);
 }
 
 function result2() {
   p2 = document.getElementById("p2").value;
+  p2icon = document.getElementById("p2-icon").value;
   playersNames++;
   console.log(p2 + " " + playersNames);
 }
@@ -33,6 +37,8 @@ $(".mode-btn").click(function() {
     $(".mode-btn").removeClass("btn-outline-dark");
     $(".mode-btn").addClass("btn-outline-light");
     $(".mode-btn").html("<i class='fas fa-sun'></i>");
+    $(".reload-btn").removeClass("btn-outline-dark");
+    $(".reload-btn").addClass("btn-outline-light");
 
   } else {
     document.body.style.backgroundColor = "#dcd6f7";
@@ -41,6 +47,8 @@ $(".mode-btn").click(function() {
     $(".mode-btn").addClass("btn-outline-dark");
     $(".mode-btn").removeClass("btn-outline-light");
     $(".mode-btn").html("<i class='fas fa-moon'></i>");
+    $(".reload-btn").addClass("btn-outline-dark");
+    $(".reload-btn").removeClass("btn-outline-light");
   }
 
 })
@@ -95,6 +103,11 @@ function check(board,num) {
     else if (turnCounter == 9) {
       $(".title").html("It's a draw! <br>Press any key to play again.");
       turnCounter = -1;
+      $(".game-board").addClass("transparent");
+      $(".game-over").removeClass("hidden");
+      $(".game-over").animate({
+        top: '40%'
+      },"slow")
     }
   }
 }
@@ -131,12 +144,12 @@ $(".box").click(function() {
     turn();
     if (turnCounter%2 != 0) {
       makeMove(userMove,"X");
-      $("." + selectedBox).html("X");
+      $("." + selectedBox).html(p1icon);
       check(board,"1");
     }
     else {
       makeMove(userMove,"O");
-      $("." + selectedBox).html("O");
+      $("." + selectedBox).html(p2icon);
       check(board,"2");
     }
   }
